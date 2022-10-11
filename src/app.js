@@ -55,6 +55,7 @@ app.get('/weather', (req, res) => {
         res.send({
             weatherDesc: 'The current temprature of the ' + location.name + ' (' + location.region + ' ' + location.country + ') is '+ current.temperature + '℃ and it is feels like ' + current.feelslike + '℃.' + ' The weather condition is ' + current.weather_descriptions[0] + ' with ' + current.cloudcover + '% cloud. ' + 'The wind direction is '+ current.wind_dir + ' with speed ' + current.wind_speed + ' km/h.',
             img: current.weather_icons[0],
+            region: location.name + ', ' + location.region + ' '+ location.country,
             weatherInfo: current.weather_descriptions[0]
         })
     })
